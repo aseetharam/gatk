@@ -10,13 +10,6 @@ From: broadinstitute/gatk:4.1.8.1
    echo "use the '$PICARDHOME' for the location of picard.jar file" 
    echo "all tools are in the path (datamash, bioawk, bwa, samtools)" 
 
-%test
-    samtools
-    bwa
-    which datamash
-    echo "$GATKHOME $GATK $PICARDHOME"
-    java -version
-
 %environment
     export GATKHOME=/gatk
     export GATK=gatk-package-4.1.8.1-local.jar
