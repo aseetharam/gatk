@@ -24,6 +24,8 @@ From: broadinstitute/gatk:4.1.8.1
    apt-get install -y bwa
    # install datamash   
    apt-get install -y datamash
+   # install bedtools
+   apt-get install -y bedtools
    # install samtools
    cd /opt
    wget https://github.com/samtools/samtools/releases/download/1.10/samtools-1.10.tar.bz2
