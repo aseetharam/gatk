@@ -11,8 +11,8 @@ From: broadinstitute/gatk:4.1.8.1
    echo "all tools are in the path (datamash, bioawk, bwa, samtools)" 
 
 %test
-    samtools --help
-    bwa --help
+    samtools
+    bwa
     which datamash
     echo "$GATKHOME $GATK $PICARDHOME"
     java -version
