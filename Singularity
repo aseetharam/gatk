@@ -24,10 +24,11 @@ From: broadinstitute/gatk:4.1.8.1
 
 %post
    apt-get update
-   apt-get install -y build-essential wget curl git autoconf
-   apt-get install -y gcc g++ bison
-   apt-get install -y autoconf automake make perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev libncurses5-dev   
-   apt-get install -y bwa datamash
+   apt-get install -y build-essential wget curl git autoconf automake
+   apt-get install -y gcc g++ bison make
+   apt-get install -y perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev libncurses5-dev   
+   apt-get install -y bwa
+   apt-get install -y datamash
    # install samtools
    cd /opt
    wget https://github.com/samtools/samtools/releases/download/1.10/samtools-1.10.tar.bz2
