@@ -27,7 +27,9 @@ From: broadinstitute/gatk:4.1.8.1
    apt-get install -y build-essential wget curl git autoconf automake
    apt-get install -y gcc g++ bison make
    apt-get install -y perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev libncurses5-dev   
+   # install BWA
    apt-get install -y bwa
+   # install datamash   
    apt-get install -y datamash
    # install samtools
    cd /opt
@@ -43,7 +45,7 @@ From: broadinstitute/gatk:4.1.8.1
    cd bioawk
    make
    mv bioawk maketab /usr/bin/
-  # picard
+   # picard
    mkdir -p /picard
    cd /picard
    wget https://github.com/broadinstitute/picard/releases/download/2.23.3/picard.jar
