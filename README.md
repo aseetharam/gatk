@@ -28,4 +28,5 @@ singularity exec gatk.sif bwa
 singularity exec gatk.sif datamash
 singularity exec gatk.sif java -jar /gatk/gatk-package-4.1.8.1-local.jar
 singularity exec gatk.sif java -jar /picard/picard.jar
+singularity exec gatk.sif bioawk
 ```
