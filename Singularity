@@ -1,9 +1,21 @@
 Bootstrap: docker
 From: broadinstitute/gatk:4.1.8.1
 
+%labels
+   MAINTAINER Arun Seetharam
+   EMAIL arnstrm@iastate.edu
+
+%runscript
+   echo "use the '$GATKHOME' for location of gatk jar file which is '$GATK'"
+   echo "use the '$PICARDHOME' for the location of picard.jar file" 
+   echo "all tools are in the path (datamash, bioawk, bwa, samtools)" 
+
 %test
-    #python -c "import numpy"
-    #mikado --help
+    samtools --help
+    bwa --help
+    which datamash
+    echo "$GATKHOME $GATK $PICARDHOME"
+    java -version
 
 %environment
     export GATKHOME=/gatk
@@ -34,4 +46,4 @@ From: broadinstitute/gatk:4.1.8.1
   mkdir -p /picard
   cd /picard
   wget https://github.com/broadinstitute/picard/releases/download/2.23.3/picard.jar
- 
+
