@@ -44,7 +44,7 @@ From: broadinstitute/gatk:4.1.8.1
    make
    mv bioawk maketab /usr/bin/
   # picard
-  mkdir -p /picard
-  cd /picard
-  wget https://github.com/broadinstitute/picard/releases/download/2.23.3/picard.jar
+   mkdir -p /picard
+   cd /picard
+   wget https://github.com/broadinstitute/picard/releases/download/2.23.3/picard.jar
 

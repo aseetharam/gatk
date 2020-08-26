@@ -1,4 +1,6 @@
-# Container for the GATK
+# Container for the GATK 
+
+[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/4700)
 
 ## Tools included
 
@@ -24,7 +26,7 @@ to use the image
 singularity exec gatk.sif samtools
 singularity exec gatk.sif bwa
 singularity exec gatk.sif datamash
-singularity exec gatk.sif java -jar $GATKHOME/$GATK
-singularity exec gatk.sif java -jar $PICARDHOME/picard.jar
+singularity exec gatk.sif java -jar /gatk/gatk-package-4.1.8.1-local.jar
+singularity exec gatk.sif java -jar /picard/picard.jar
 ```
 
