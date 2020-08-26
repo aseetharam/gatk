@@ -3,12 +3,12 @@
 
 ## Tools included
 
-1. (SamTools)[http://www.htslib.org/]
-2. (BWA)[http://bio-bwa.sourceforge.net/]
-3. (Datamash)[https://www.gnu.org/software/datamash/]
-4. (GATK)[https://gatk.broadinstitute.org/hc/en-us]
-5. (Picard Tools)[https://broadinstitute.github.io/picard/]
-6. (BioAWK)[https://github.com/lh3/bioawk]
+1. [SamTools](http://www.htslib.org/)
+2. [BWA](http://bio-bwa.sourceforge.net/)
+3. [Datamash](https://www.gnu.org/software/datamash/)
+4. [GATK](https://gatk.broadinstitute.org/hc/en-us)
+5. [Picard Tools](https://broadinstitute.github.io/picard/)
+6. [BioAWK](https://github.com/lh3/bioawk)
 
 Please be sure to cite all the programs if you use this container.
 
@@ -29,4 +29,3 @@ singularity exec gatk.sif datamash
 singularity exec gatk.sif java -jar /gatk/gatk-package-4.1.8.1-local.jar
 singularity exec gatk.sif java -jar /picard/picard.jar
 ```
-
