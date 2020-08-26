@@ -9,6 +9,7 @@
 4. [GATK](https://gatk.broadinstitute.org/hc/en-us)
 5. [Picard Tools](https://broadinstitute.github.io/picard/)
 6. [BioAWK](https://github.com/lh3/bioawk)
+7. [BedTools](https://bedtools.readthedocs.io)
 
 Please be sure to cite all the programs if you use this container.
 
@@ -29,4 +30,5 @@ singularity exec gatk.sif datamash
 singularity exec gatk.sif java -jar /gatk/gatk-package-4.1.8.1-local.jar
 singularity exec gatk.sif java -jar /picard/picard.jar
 singularity exec gatk.sif bioawk
+singularity exec gatk.sif bedtools
 ```
