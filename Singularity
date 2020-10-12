@@ -19,21 +19,17 @@ From: broadinstitute/gatk:4.1.8.1
    apt-get update
    apt-get install -y build-essential wget curl git autoconf automake
    apt-get install -y gcc g++ bison make
-   apt-get install -y perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev libncurses5-dev   
+   apt-get install -y perl zlib1g-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev libncurses5-dev
    # install BWA
    apt-get install -y bwa
    # install datamash   
    apt-get install -y datamash
    # install bedtools
    apt-get install -y bedtools
+   # vcftools
+   apt-get install -y vcftools
    # install samtools
-   cd /opt
-   wget https://github.com/samtools/samtools/releases/download/1.10/samtools-1.10.tar.bz2
-   tar xf samtools-1.10.tar.bz2
-   cd samtools-1.10
-   ./configure
-   make
-   make install
+   apt-get install -y samtools
    # install bioawk
    cd /opt
    git clone https://github.com/lh3/bioawk.git
@@ -44,11 +40,3 @@ From: broadinstitute/gatk:4.1.8.1
    mkdir -p /picard
    cd /picard
    wget https://github.com/broadinstitute/picard/releases/download/2.23.3/picard.jar
-   # VCFtools
-   cd /opt
-   git clone https://github.com/vcftools/vcftools.git
-   cd vcftools
-   ./autogen.sh
-   ./configure
-   make
-   make install
