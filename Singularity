@@ -8,7 +8,7 @@ From: broadinstitute/gatk:4.1.8.1
 %runscript
    echo "use the '$GATKHOME' for location of gatk jar file which is '$GATK'"
    echo "use the '$PICARDHOME' for the location of picard.jar file" 
-   echo "all tools are in the path (datamash, bioawk, bwa, samtools)" 
+   echo "all tools are in the path (datamash, bioawk, bwa, samtools, vcftools)" 
 
 %environment
     export GATKHOME=/gatk
@@ -45,7 +45,7 @@ From: broadinstitute/gatk:4.1.8.1
    cd /picard
    wget https://github.com/broadinstitute/picard/releases/download/2.23.3/picard.jar
    # VCFtools
-   cd opt/
+   cd /opt
    git clone https://github.com/vcftools/vcftools.git
    cd vcftools
    ./autogen.sh
