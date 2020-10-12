@@ -44,4 +44,11 @@ From: broadinstitute/gatk:4.1.8.1
    mkdir -p /picard
    cd /picard
    wget https://github.com/broadinstitute/picard/releases/download/2.23.3/picard.jar
-
+   # VCFtools
+   cd opt/
+   git clone https://github.com/vcftools/vcftools.git
+   cd vcftools
+   ./autogen.sh
+   ./configure
+   make
+   make install
