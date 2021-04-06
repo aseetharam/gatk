@@ -14,6 +14,7 @@ From: broadinstitute/gatk:4.2.0.0
     export GATKHOME=/gatk
     export GATK=gatk-package-4.2.0.0-local.jar
     export PICARDHOME=/picard
+    export PATH=$PATH:/opt/bwa-mem2-2.0pre2_x64-linux
 
 %post
    curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add
@@ -45,4 +46,3 @@ From: broadinstitute/gatk:4.2.0.0
    mkdir -p /bwa-mem2
    cd /opt
    curl -L https://github.com/bwa-mem2/bwa-mem2/releases/download/v2.0pre2/bwa-mem2-2.0pre2_x64-linux.tar.bz2 | tar jxf - 
-   mv bwa-mem2-2.0pre2_x64-linux/bwa-mem2.* /usr/bin/
