@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: broadinstitute/gatk:4.1.8.1
+From: broadinstitute/gatk:4.2.0.0
 
 %labels
    MAINTAINER Arun Seetharam
@@ -12,10 +12,11 @@ From: broadinstitute/gatk:4.1.8.1
 
 %environment
     export GATKHOME=/gatk
-    export GATK=gatk-package-4.1.8.1-local.jar
+    export GATK=gatk-package-4.2.0.0-local.jar
     export PICARDHOME=/picard
 
 %post
+   curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add
    apt-get update
    apt-get install -y build-essential wget curl git autoconf automake
    apt-get install -y gcc g++ bison make
@@ -39,4 +40,9 @@ From: broadinstitute/gatk:4.1.8.1
    # picard
    mkdir -p /picard
    cd /picard
-   wget https://github.com/broadinstitute/picard/releases/download/2.23.3/picard.jar
+   wget https://github.com/broadinstitute/picard/releases/download/2.25.1/picard.jar
+   # install BWA-mem2
+   mkdir -p /bwa-mem2
+   cd /opt
+   curl -L https://github.com/bwa-mem2/bwa-mem2/releases/download/v2.0pre2/bwa-mem2-2.0pre2_x64-linux.tar.bz2 | tar jxf - 
+   mv bwa-mem2-2.0pre2_x64-linux/bwa-mem2 /usr/bin/
