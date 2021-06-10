@@ -45,4 +45,4 @@ From: broadinstitute/gatk:4.2.0.0
    # install BWA-mem2
    mkdir -p /bwa-mem2
    cd /opt
-   curl -L https://github.com/bwa-mem2/bwa-mem2/releases/download/v2.0pre2/bwa-mem2-2.0pre2_x64-linux.tar.bz2 | tar jxf - 
+   curl -L https://github.com/bwa-mem2/bwa-mem2/releases/download/v2.2.1/bwa-mem2-2.2.1_x64-linux.tar.bz2 | tar jxf - 
