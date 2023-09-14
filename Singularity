@@ -12,7 +12,7 @@ From: broadinstitute/gatk:latest
 
 %environment
     export GATKHOME=/gatk
-    export GATK=gatk-package-4.2.0.0-local.jar
+    export GATK=gatk-package-4.4.0.0-local.jar
     export PICARDHOME=/picard
     export PATH=$PATH:/opt/bwa-mem2
 
