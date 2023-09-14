@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: broadinstitute/gatk:4.2.0.0
+From: broadinstitute/gatk:latest
 
 %labels
    MAINTAINER Arun Seetharam
@@ -14,7 +14,7 @@ From: broadinstitute/gatk:4.2.0.0
     export GATKHOME=/gatk
     export GATK=gatk-package-4.2.0.0-local.jar
     export PICARDHOME=/picard
-    export PATH=$PATH:/opt/bwa-mem2-2.0pre2_x64-linux
+    export PATH=$PATH:/opt/bwa-mem2
 
 %post
    curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add
@@ -32,6 +32,8 @@ From: broadinstitute/gatk:4.2.0.0
    apt-get install -y vcftools
    # install samtools
    apt-get install -y samtools
+   # install STAR
+   apt-get install -y rna-star
    # install bioawk
    cd /opt
    git clone https://github.com/lh3/bioawk.git
@@ -39,10 +41,17 @@ From: broadinstitute/gatk:4.2.0.0
    make
    mv bioawk maketab /usr/bin/
    # picard
-   mkdir -p /picard
-   cd /picard
-   wget https://github.com/broadinstitute/picard/releases/download/2.25.1/picard.jar
+#   mkdir -p /picard
+#   cd /picard
+#   wget https://github.com/broadinstitute/picard/releases/download/2.25.1/picard.jar
    # install BWA-mem2
    mkdir -p /bwa-mem2
    cd /opt
-   curl -L https://github.com/bwa-mem2/bwa-mem2/releases/download/v2.2.1/bwa-mem2-2.2.1_x64-linux.tar.bz2 | tar jxf - 
+   # Compile from source (not recommended for general users)
+   # Get the source
+   git clone --recursive https://github.com/bwa-mem2/bwa-mem2
+   cd bwa-mem2
+   # Compile and run
+   make
+
+#   curl -L https://github.com/bwa-mem2/bwa-mem2/releases/download/v2.2.1/bwa-mem2-2.2.1_x64-linux.tar.bz2 | tar jxf - 
