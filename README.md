@@ -28,7 +28,7 @@ docker pull arnstrm2/gatk:4.4.0
 
 example usage:
 
-```
+```bash
 singularity exec gatk_4.4.0.sif samtools
 singularity exec gatk_4.4.0.sif bwa
 singularity exec gatk_4.4.0.sif bwa-mem2
@@ -41,6 +41,9 @@ singularity exec gatk_4.4.0.sif STAR
 singularity exec gatk_4.4.0.sif minimap2
 singularity exec gatk_4.4.0.sif pbmm2
 singularity exec gatk_4.4.0.sif freebayes
-singularity exec gatk_4.4.0.sif java -jar /opt/gatk-package-4.4.0.0-local.jar
-singularity exec gatk_4.4.0.sif opt/java -jar /opt/snpEff/snpEff.jar
+singularity exec gatk_4.4.0.sif java -jar /opt/snpEff/snpEff.jar
+# running gatk tools
+singularity exec gatk_4.4.0.sif gatk --spark-runner LOCAL CreateSequenceDictionary # or
+singularity exec gatk_4.4.0.sif java -jar /gatk/gatk-package-4.4.0.0-local.jar CreateSequenceDictionary # or
+singularity exec gatk_4.4.0.sif java -jar /gatk/gatk.jar CreateSequenceDictionary
 ```

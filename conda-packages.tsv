@@ -1,4 +1,4 @@
-Name	Version	Build	Channel
+#Name	Version	Build	Channel
 _libgcc_mutex	0.1	main	
 _openmp_mutex	5.1	1_gnu	
 asn1crypto	1.5.1	py311h06a4308_0	
@@ -24,13 +24,9 @@ conda-package-streaming	0.9.0	py311h06a4308_0
 cryptography	41.0.3	py311h130f0dd_0	
 curl	8.2.1	h37d81fd_0	
 datamash	1.1.0	0	bioconda
-dbus	1.13.18	hb2f20db_0	
-expat	2.5.0	h6a678d5_0	
 fmt	9.1.0	hdb19cb5_0	
 freebayes	0.9.21.7	0	bioconda
-freetype	2.12.1	h4a9f257_0	
 gdbm	1.18	hd4cb3f1_4	
-glib	2.69.1	he621ea3_2	
 icu	73.1	h6a678d5_0	
 idna	3.4	py311h06a4308_0	
 jsonpatch	1.32	pyhd3eb1b0_0	
@@ -49,21 +45,17 @@ libgomp	11.2.0	h1234567_1
 libmamba	1.5.1	hba0046a_0	
 libmambapy	1.5.1	py311ha06983f_0	
 libnghttp2	1.52.0	ha637b67_1	
-libpng	1.6.39	h5eee18b_0	
 libsolv	0.7.24	he621ea3_0	
 libssh2	1.10.0	h37d81fd_2	
 libstdcxx-ng	11.2.0	h1234567_1	
 libuuid	1.41.5	h5eee18b_0	
-libxcb	1.15	h7f8727e_0	
 libxml2	2.10.4	hf1b16e4_1	
 lz4-c	1.9.4	h6a678d5_0	
 minimap2	2.17	h5bf99c6_4	bioconda
 ncurses	6.4	h6a678d5_0	
-openjdk	11.0.13	h87a67e3_0	
 openssl	1.1.1w	h7f8727e_0	
 packaging	23.1	py311h06a4308_0	
 pbmm2	1.13.0	h9ee0642_0	bioconda
-pcre	8.45	h295c915_0	
 pcre2	10.42	hebb0a14_0	
 perl	5.34.0	h5eee18b_2	
 pip	23.1.2	py311h06a4308_0	
@@ -81,9 +73,9 @@ requests	2.31.0	py311h06a4308_0
 ruamel.yaml	0.17.21	py311h5eee18b_0	
 ruamel_yaml	0.17.21	py311h5eee18b_0	
 samtools	1.5	1	bioconda
+seqtk	1.2	0	bioconda
 setuptools	67.8.0	py311h06a4308_0	
 six	1.16.0	pyhd3eb1b0_1	
-snpeff	5.1	hdfd78af_2	bioconda
 sqlite	3.41.2	h5eee18b_0	
 star	2.5.2b	0	bioconda
 tk	8.6.12	h1ccaba5_0	

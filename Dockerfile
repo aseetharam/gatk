@@ -18,6 +18,12 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -
 RUN bash ~/miniconda.sh -b -u -p /opt/miniconda
 ENV PATH="/opt/miniconda/bin:${PATH}"
 RUN conda update -n base -c defaults conda
+# snpeff uses older java on conda so install snpeff manually
+RUN cd /opt && \
+    wget https://snpeff.blob.core.windows.net/versions/snpEff_latest_core.zip && \
+    unzip snpEff_latest_core.zip && \
+    rm snpEff_latest_core.zip
+ENV PATH="/opt/snpEff:${PATH}"
 
 # install conda packages
 RUN conda install -y -c bioconda pbmm2
@@ -30,6 +36,6 @@ RUN conda install -y -c bioconda bedtools
 RUN conda install -y -c bioconda vcftools
 RUN conda install -y -c bioconda samtools
 RUN conda install -y -c bioconda star
-RUN conda install -y -c bioconda snpeff
 RUN conda install -y -c bioconda bwa-mem2 
 RUN conda install -y -c bioconda bioawk
+RUN conda install -y -c bioconda seqtk
