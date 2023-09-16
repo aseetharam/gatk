@@ -15,17 +15,32 @@ Please be sure to cite all the programs if you use this container.
 to pull the image
 
 ```
-singularity pull --name gatk.sif shub://aseetharam/gatk:latest
+singularity pull --name gatk_4.4.0.sif docker://arnstrm2/gatk:4.4.0
 ```
 
-to use the image
+## Docker
+
+to pull the image
 
 ```
-singularity exec gatk.sif samtools
-singularity exec gatk.sif bwa
-singularity exec gatk.sif datamash
-singularity exec gatk.sif java -jar /gatk/gatk-package-4.1.8.1-local.jar
-singularity exec gatk.sif java -jar /picard/picard.jar
-singularity exec gatk.sif bioawk
-singularity exec gatk.sif bedtools
+docker pull arnstrm2/gatk:4.4.0
+```
+
+example usage:
+
+```
+singularity exec gatk_4.4.0.sif samtools
+singularity exec gatk_4.4.0.sif bwa
+singularity exec gatk_4.4.0.sif bwa-mem2
+singularity exec gatk_4.4.0.sif bioawk
+singularity exec gatk_4.4.0.sif datamash
+singularity exec gatk_4.4.0.sif vcftools
+singularity exec gatk_4.4.0.sif bcftools
+singularity exec gatk_4.4.0.sif bedtools
+singularity exec gatk_4.4.0.sif STAR
+singularity exec gatk_4.4.0.sif minimap2
+singularity exec gatk_4.4.0.sif pbmm2
+singularity exec gatk_4.4.0.sif freebayes
+singularity exec gatk_4.4.0.sif java -jar /opt/gatk-package-4.4.0.0-local.jar
+singularity exec gatk_4.4.0.sif opt/java -jar /opt/snpEff/snpEff.jar
 ```
