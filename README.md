@@ -1,15 +1,12 @@
-[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/4700)
+
 # Container for the GATK 
 
-## Tools included
+# Installed software:
 
-1. [SamTools](http://www.htslib.org/)
-2. [BWA](http://bio-bwa.sourceforge.net/)
-3. [Datamash](https://www.gnu.org/software/datamash/)
-4. [GATK](https://gatk.broadinstitute.org/hc/en-us)
-5. [Picard Tools](https://broadinstitute.github.io/picard/)
-6. [BioAWK](https://github.com/lh3/bioawk)
-7. [BedTools](https://bedtools.readthedocs.io)
+1. [`apt` pacakges list](apt-packages.tsv)
+2. [`python` packages list](python-packages.tsv)
+3. [`r` pacakges list](r-packages.tsv)
+4. [`conda` packages list](conda-packages.tsv)
 
 Please be sure to cite all the programs if you use this container.
 
