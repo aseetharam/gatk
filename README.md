@@ -8,7 +8,7 @@
 3. [`r` pacakges list](r-packages.tsv)
 4. [`conda` packages list](conda-packages.tsv)
 
-Please be sure to cite all the programs if you use this container.
+Please be sure to cite all the programs (not this repository) if you use this container.
 
 ## Singularity 
 
@@ -26,7 +26,7 @@ to pull the image
 docker pull arnstrm2/gatk:4.4.0
 ```
 
-example usage:
+## Example usage
 
 ```bash
 singularity exec gatk_4.4.0.sif samtools
