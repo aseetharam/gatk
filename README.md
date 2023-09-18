@@ -14,16 +14,22 @@ Please be sure to cite all the programs (not this repository) if you use this co
 
 to pull the image
 
-```
+```bash
+# from Docker hub
 singularity pull --name gatk_4.4.0.sif docker://arnstrm2/gatk:4.4.0
+# from GitHub
+singularity pull docker:ghcr.io/aseetharam/gatk:master
 ```
 
 ## Docker
 
 to pull the image
 
-```
+```bash
+# from Docker hub
 docker pull arnstrm2/gatk:4.4.0
+# from GitHub
+docker pull ghcr.io/aseetharam/gatk:master
 ```
 
 ## Example usage
