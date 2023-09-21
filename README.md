@@ -18,7 +18,7 @@ to pull the image
 # from Docker hub
 singularity pull --name gatk_4.4.0.sif docker://arnstrm2/gatk:4.4.0
 # from GitHub
-singularity pull docker:ghcr.io/aseetharam/gatk:master
+singularity pull docker://ghcr.io/aseetharam/gatk:master
 ```
 
 ## Docker
